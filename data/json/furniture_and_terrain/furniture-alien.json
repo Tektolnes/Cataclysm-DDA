@@ -722,6 +722,33 @@
   },
   {
     "type": "furniture",
+    "id": "f_exodii_reader",
+    "name": "illuminated workstation",
+    "looks_like": "t_machinery_light",
+    "description": "A boxy metal table with exposed wiring attached to nearby machinery.  It emits a green light from its transparent plastic top - underneath the plastic a bar emitting the light is scanning back and forth, somewhat resembling the scanning instruments inside a standard office document scanner.  Against the wall is a wall lined with with hundreds of odd connections, each at the end of a retractable cord.",
+    "symbol": "%",
+    "color": "green",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [ "TRANSPARENT", "BLOCKSDOOR" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "pipe", "count": [ 0, 3 ] },
+        { "item": "sheet_metal_small", "count": [ 2, 10 ] },
+        { "item": "scrap_copper", "count": [ 2, 12 ] },
+        { "item": "exodii_computer", "count": [ 0, 1 ] },
+        { "item": "exodii_motor", "count": [ 0, 1 ] },
+        { "item": "cable", "charges": [ 0, 3 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
     "id": "f_crystalline_flower",
     "name": "crystalline flower",
     "description": "A crystalline structure that resembles a plant.",

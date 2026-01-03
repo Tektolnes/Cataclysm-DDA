@@ -1,0 +1,78 @@
+[
+  {
+    "type": "npc",
+    "id": "exodii_datamaster",
+    "name_suffix": "Datamaster",
+    "class": "NC_EXODII_TYPE_11_Datamaster",
+    "name_unique": "Garrulus",
+    "attitude": 0,
+    "mission": 3,
+    "chat": "TALK_DATAMASTER_INTRO_1",
+    "faction": "exodii",
+    "personality": { "aggression": -2, "bravery": 2, "collector": 2, "altruism": -2 }
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_EXODII_TYPE_11_Datamaster",
+    "name": { "str": "Cyborg, type 11" },
+    "job_description": "I'm a cyborg.",
+    "traits": [
+      { "trait": "EXODII_BODY_11" },
+      { "trait": "NO_BASH" },
+      { "trait": "RETURN_TO_START_POS" }
+    ],
+    "common": false,
+    "bonus_str": { "rng": [ 0, 2 ] },
+    "bonus_dex": { "rng": [ 0, 1 ] },
+    "bonus_int": { "rng": [ 0, 6 ] },
+    "bonus_per": { "rng": [ 0, 1 ] },
+    "worn_override": "EMPTY_GROUP",
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": { "mul": [ { "one_in": 3 }, { "sum": [ { "dice": [ 2, 2 ] }, { "constant": 0 }, { "one_in": 4 } ] } ] }
+      },
+      { "skill": "mechanics", "bonus": { "rng": [ 5, 7 ] } },
+      { "skill": "electronics", "bonus": { "rng": [ 3, 6 ] } },
+      { "skill": "firstaid", "bonus": { "rng": [ 2, 4 ] } },
+      { "skill": "unarmed", "bonus": { "rng": [ 4, 7 ] } },
+      { "skill": "speech", "bonus": { "rng": [ 6, 9 ] } }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "EXODII_BODY_11",
+    "flags": [ "Exodii_Body" ],
+    "name": { "str": "Exodii cyborg framework - style 11a" },
+    "points": 0,
+    "visibility": 4,
+    "ugliness": 4,
+    "mixed_effect": true,
+    "description": "Your brain and some of your organs are shielded in a yellow plastic bipedal walker frame.",
+    "valid": false,
+    "purifiable": false,
+    "types": [ "Cyberframe", "Cybernetic" ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MAX_HP", "add": 20 },
+          { "value": "STRENGTH", "add": 2 },
+          { "value": "DEXTERITY", "add": 6 },
+          { "value": "CARRY_WEIGHT", "multiply": 2 }
+        ]
+      }
+    ],
+    "restricts_gear": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r", "hand_l", "hand_r", "head", "foot_l", "foot_r" ],
+    "armor": [
+      {
+        "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth" ],
+        "cut": 15,
+        "bash": 15,
+        "stab": 15,
+        "bullet": 5,
+        "acid": 40,
+        "electric": 5
+      }
+    ]
+  },
+]

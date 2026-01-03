@@ -1,0 +1,122 @@
+[
+  {
+    "id": "TALK_DATAMASTER_INTRO_1",
+    "type": "talk_topic",
+    "//": "likes to learn languages and try them out - this fellow has decided an exaggerated Bostonian accent will go over well with the locals",
+    "dynamic_line": "&You see before you a cyborg with a yellow, all-plastic body.  It's quickly grabbing books off the nearby shelf, scanning them over a nearby illuminated workstation, and placing them back on the shelf.  After a moment it swivels its head and speaks to you from an electronic speaker that gives every word the sound of a cheap radio.  \"Hey, nice ta meet ya. I've been workin' on the local talk already, so it's wicked good ta have someone ta practice with.\"",
+    "responses": [
+      { "text": "Woah!  You speak English!", "topic": "TALK_DATAMASTER_INTRO_2" }
+    ]
+  },
+  {
+    "id": "TALK_DATAMASTER_INTRO_2",
+    "type": "talk_topic",
+    "dynamic_line": "Yeah!  I've been basin' how I talk off what you guys call the \"local news.\"  Turns out people are more comfortable when you talk to 'em in the same kinda way as their video shows.  Video shows?  No.  TV!  You call it TV.",
+    "responses": [
+      { "text": "Well, I can understand you, so that works.  Are you scanning those books?", "topic": "TALK_DATAMASTER_INTRO_3" },
+    ]
+  },
+  {
+    "id": "TALK_DATAMASTER_INTRO_3",
+    "type": "talk_topic",
+    "dynamic_line": "Yup.  I'm tryin' ta record everythin' I can while we still got the time.  I'm always scoopin' up vids, audio, all that written stuff too - whatever's out there.",
+    "responses": [ { "text": "Doesn't look like a full library you have there.", "topic": "TALK_DATAMASTER_INTRO_4" } ]
+  },
+  {
+    "id": "TALK_WEAPONMASTER_INTRO_4",
+    "type": "talk_topic",
+    "dynamic_line": "I got more than this, but yeah, I've got some holes in my stash.  Right now, I'm lookin' for books on the, ya' know, fightin' stuff people around heah use.  I got a couple lists I pulled from what passes for a library on your end.  Need some books on throwin' hands, and some on usin' weapons too.  If you can grab 'em for me and bring 'em back, maybe I can square ya up with one a' those bionic modules we use ta learn fightin' moves.",
+    "responses": [
+      { "text": "Sure.  Pass me the lists.", "topic": "TALK_WEAPONMASTER_QUEST" },
+      { "text": "No, thanks.  See you later.", "topic": "TALK_DONE", },
+    ]
+  },
+  {
+    "id": "TALK_WEAPONMASTER_QUEST",
+    "type": "talk_topic",
+    "dynamic_line": "&The Datamaster passes you a transparent plastic sheets etched with titles, authors, and IBAN numbers for 10 books.  \"Here ya' go.  Got two batches on that list.  Grab a batch, bring it back heah, and we'll talk dough.  'Dough?'  Is that right?\"",
+    "responses": [
+      {
+        "text": "Yeah, I understand.  I'll be back when I've collected one of the batches.",
+        "effect": [ { "assign_mission": "MISSION_EXODII_DATAMASTER_1" } ],
+        "effect": [ { "assign_mission": "MISSION_EXODII_DATAMASTER_2" } ],
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_EXODII_DATAMASTER_1_COMPLETE",
+    "type": "talk_topic",
+    "dynamic_line": "The Datamaster takes the books and without a word starts to quickly scan them, page by page, on their workstation.  \"Hold up right heah! I’ll be back in a minute.\"  The Datamaster leaves the room, and in less than thirty seconds returns.  The Datamaster hands you a CBM package and ceremoniously bows its body.",
+    "responses": [
+      {
+        "text": "Thanks.  I'll keep looking for those other books.",
+        "condition": { "u_has_mission": "MISSION_EXODII_DATAMASTER_2" },
+        "topic": "finish me" 
+      },
+      {
+        "text": "That's everything from the list you gave me.",
+        "condition": { { "not": "u_has_mission": "MISSION_EXODII_DATAMASTER_2" } },
+        "topic": "MISSION_EXODII_DATAMASTER_MARTIAL_COMPLETE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_EXODII_DATAMASTER",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "&The Datamaster is testing the charging port of a smartphone on the various connections at its workstation.  Before obviously seeing you, it shouts \"Yo!\" then turns to face you.",
+      "&The Datamaster tilts its mechanical head back, ticking up its chin. \"Sup?\" it says.",
+      "Hey, welcome back, kid."
+      "Yo!",
+      "Sup?",
+      "Look what the cat dragged in!"
+    ],
+    "responses": [
+      {
+        "text": "Just saying \"Hi.\"  See you around.",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "On second thought, I'll take a look at those lists of books you need.",
+        "topic": "TALK_WEAPONMASTER_QUEST"
+      },
+      {
+        "text": "I've got those unarmed manuals you were looking for.  [Hand over the books]",
+        "condition": {
+          "and": [
+            { "u_has_mission": "MISSION_EXODII_DATAMASTER_1" },
+            { "u_has_item": "manual_judo" },
+            { "u_has_item": "manual_karate" },
+            { "u_has_item": "manual_aikido" },
+            { "u_has_item": "manual_boxing" },
+            { "u_has_item": "manual_kickboxing" }
+          ]
+        },
+        "effect": [
+          { "u_consume_item": "xedra_mobile_weather_station", "count": 1, "popup": true },
+          { "finish_mission": "MISSION_EXODII_DATAMASTER_1", "success": true }
+        ],
+        "topic": "MISSION_EXODII_DATAMASTER_1_COMPLETE"
+      },
+      {
+        "text": "I've got those weapons manuals you were looking for.  [Hand over the books]",
+        "condition": {
+          "and": [
+            { "u_has_mission": "MISSION_EXODII_DATAMASTER_2" },
+            { "u_has_item": "manual_eskrima" },
+            { "u_has_item": "manual_ninjutsu" },
+            { "u_has_item": "manual_krav_maga" },
+            { "u_has_item": "manual_silat" },
+            { "u_has_item": "manual_fencing" }
+          ]
+        },
+        "effect": [
+          { "u_consume_item": "xedra_mobile_weather_station", "count": 1, "popup": true },
+          { "finish_mission": "MISSION_EXODII_DATAMASTER_2", "success": true }
+        ],
+        "topic": "MISSION_EXODII_DATAMASTER_2_COMPLETE"
+      },
+    ],
+  }
+]
