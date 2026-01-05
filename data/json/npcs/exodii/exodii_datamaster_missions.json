@@ -1,6 +1,28 @@
 [
   {
-    "id": "MISSION_EXODII_DATAMASTER_1",
+    "id": "MISSION_EXODII_DATAMASTER_2",
+    "type": "mission_definition",
+    "name": { "str": "Newspapers for the Exodii" },
+    "description": "The Exodii Datamaster want you to ",
+    "goal": "MGOAL_NULL",
+    "difficulty": 5,
+    "value": 0,
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "has_generic_rewards": false,
+    "dialogue": {
+      "describe": "…",
+      "offer": "…",
+      "accepted": "…",
+      "rejected": "…",
+      "advice": "…",
+      "inquire": "…",
+      "success": "…",
+      "success_lie": "…",
+      "failure": "…"
+    }
+  },
+  {
+    "id": "MISSION_EXODII_DATAMASTER_2",
     "type": "mission_definition",
     "name": { "str": "Throwin' Hands" },
     "description": "The Exodii Datamaster want you to find some manuals for unarmed martial arts styles.  The list is five specific books: <color_yellow>Kodokan Judo</color>; <color_yellow>The Shōtōkan Karate Handbook</color>; <color_yellow>The Spirit of Aikido</color>; <color_yellow>Practical Pugilism</color>; <color_yellow>The Ultimate Guide to Kickboxing</color>.",
@@ -22,7 +44,7 @@
     }
   },
   {
-    "id": "MISSION_EXODII_DATAMASTER_2",
+    "id": "MISSION_EXODII_DATAMASTER_3",
     "type": "mission_definition",
     "name": { "str": "Usin' Weapons" },
     "description": "The Exodii Datamaster want you to find some manuals for armed martial arts styles.  The list is five specific books: <color_yellow>Practical Eskrima</color>;< color_yellow>Essence of Ninjutsu</color>; <color_yellow>Complete Krav Maga</color>; <color_yellow>The Indonesian Warrior</color>; and <color_yellow>The Modern Swordsman</color>.",

@@ -2,84 +2,47 @@
   {
     "id": "TALK_DATAMASTER_INTRO_1",
     "type": "talk_topic",
-    "//": "likes to learn languages and try them out - this fellow has decided an exaggerated Bostonian accent will go over well with the locals",
-    "dynamic_line": "&You see before you a cyborg with a yellow, all-plastic body.  It's quickly grabbing books off the nearby shelf, scanning them over a nearby illuminated workstation, and placing them back on the shelf.  After a moment it swivels its head and speaks to you from an electronic speaker that gives every word the sound of a cheap radio.  \"Hey, nice ta meet ya. I've been workin' on the local talk already, so it's wicked good ta have someone ta practice with.\"",
+    "//": "Used to speak some version of Akkadian, probably originally from an alternate-dimension Neo-Assyrian Empire, but that was a long time ago, and he speaks it only in a fragmented way, relying on miming to get by to non-Exodii."
+    "dynamic_line": "&You see before you a cyborg with a jade-colored frame, clearly plated by or constructed with a petinad copper.  It is working within a small mess of papers, magazines, and books - it is quickly and uncarefully grabbing books off the nearby shelf, scanning them over a nearby illuminated workstation, and placing them back on the shelf.  After a moment it swivels its head and speaks to you from an electronic speaker, giving every word the sound of a historical recording on a cheap radio.  \"Lu sulmu.\"",
     "responses": [
-      { "text": "Woah!  You speak English!", "topic": "TALK_DATAMASTER_INTRO_2" }
+      { "text": "Hello, I think?", "topic": "TALK_DATAMASTER_INTRO_2" },
+      { "text": "[back away slowly]", "topic": "TALK_DONE" }
     ]
   },
   {
     "id": "TALK_DATAMASTER_INTRO_2",
     "type": "talk_topic",
-    "dynamic_line": "Yeah!  I've been basin' how I talk off what you guys call the \"local news.\"  Turns out people are more comfortable when you talk to 'em in the same kinda way as their video shows.  Video shows?  No.  TV!  You call it TV.",
+    "dynamic_line": "&The cyborg clangs a hand on its torso and speaks \"ani.\"  Then grabs a document off the shelf -- a  \"egertu.\"  He then repeats it several times, pointing at the newspapers every single time before pointing at you and stating \"atmu.\"\br\br Finally he points at you, the newspaper, and himself, in that order: \"Atmu. Egertu. Ani.\"",
     "responses": [
-      { "text": "Well, I can understand you, so that works.  Are you scanning those books?", "topic": "TALK_DATAMASTER_INTRO_3" },
+      { "text": "You \"ani,\" newspaper \"ergertu\", me \"atmi.\  [You mime trading something to the cyborg] You want me to bring you newspapers?  Just like those?" "topic": "TALK_DATAMASTER_INTRO_3" },
+      { "text": "[back away slowly]", "topic": "TALK_DONE" }
     ]
   },
   {
     "id": "TALK_DATAMASTER_INTRO_3",
     "type": "talk_topic",
-    "dynamic_line": "Yup.  I'm tryin' ta record everythin' I can while we still got the time.  I'm always scoopin' up vids, audio, all that written stuff too - whatever's out there.",
-    "responses": [ { "text": "Doesn't look like a full library you have there.", "topic": "TALK_DATAMASTER_INTRO_4" } ]
-  },
-  {
-    "id": "TALK_WEAPONMASTER_INTRO_4",
-    "type": "talk_topic",
-    "dynamic_line": "I got more than this, but yeah, I've got some holes in my stash.  Right now, I'm lookin' for books on the, ya' know, fightin' stuff people around heah use.  I got a couple lists I pulled from what passes for a library on your end.  Need some books on throwin' hands, and some on usin' weapons too.  If you can grab 'em for me and bring 'em back, maybe I can square ya up with one a' those bionic modules we use ta learn fightin' moves.",
+    "//":
+    "dynamic_line": "&The cyborg simply says \"dalilu,\", counts 5 fingers on one hand, points at a newspaper, and uncerimoneously goes back to its work.",
+    "effect": [ { "assign_mission": "MISSION_EXODII_DATAMASTER_2" } ],
+    "effect": [ { "assign_mission": "MISSION_EXODII_DATAMASTER_1" } ],
     "responses": [
-      { "text": "Sure.  Pass me the lists.", "topic": "TALK_WEAPONMASTER_QUEST" },
-      { "text": "No, thanks.  See you later.", "topic": "TALK_DONE", },
-    ]
-  },
-  {
-    "id": "TALK_WEAPONMASTER_QUEST",
-    "type": "talk_topic",
-    "dynamic_line": "&The Datamaster passes you a transparent plastic sheets etched with titles, authors, and IBAN numbers for 10 books.  \"Here ya' go.  Got two batches on that list.  Grab a batch, bring it back heah, and we'll talk dough.  'Dough?'  Is that right?\"",
-    "responses": [
-      {
-        "text": "Yeah, I understand.  I'll be back when I've collected one of the batches.",
-        "effect": [ { "assign_mission": "MISSION_EXODII_DATAMASTER_1" } ],
-        "effect": [ { "assign_mission": "MISSION_EXODII_DATAMASTER_2" } ],
-        "topic": "TALK_DONE"
-      }
-    ]
-  },
-  {
-    "id": "MISSION_EXODII_DATAMASTER_1_COMPLETE",
-    "type": "talk_topic",
-    "dynamic_line": "The Datamaster takes the books and without a word starts to quickly scan them, page by page, on their workstation.  \"Hold up right heah! I’ll be back in a minute.\"  The Datamaster leaves the room, and in less than thirty seconds returns.  The Datamaster hands you a CBM package and ceremoniously bows its body.",
-    "responses": [
-      {
-        "text": "Thanks.  I'll keep looking for those other books.",
-        "condition": { "u_has_mission": "MISSION_EXODII_DATAMASTER_2" },
-        "topic": "finish me" 
-      },
-      {
-        "text": "That's everything from the list you gave me.",
-        "condition": { { "not": "u_has_mission": "MISSION_EXODII_DATAMASTER_2" } },
-        "topic": "MISSION_EXODII_DATAMASTER_MARTIAL_COMPLETE"
-      }
+      { "text": "Right.  Five Newspapers.  Goodbye.", "topic": "TALK_DONE" },
+      { "text": "[back away slowly]", "topic": "TALK_DONE" }
     ]
   },
   {
     "id": "TALK_EXODII_DATAMASTER",
     "type": "talk_topic",
     "dynamic_line": [
-      "&The Datamaster is testing the charging port of a smartphone on the various connections at its workstation.  Before obviously seeing you, it shouts \"Yo!\" then turns to face you.",
-      "&The Datamaster tilts its mechanical head back, ticking up its chin. \"Sup?\" it says.",
-      "Hey, welcome back, kid."
-      "Yo!",
-      "Sup?",
-      "Look what the cat dragged in!"
+      "&The cyborg is testing the charging port of a smartphone on the various connections at its workstation.  It turns to face you as you approach.",
+      "&The cyborg is scanning newspapers when you approach.",
+      "&The cyborg is tirelessly scanning books when you approach.",
+      "&The cyborg is sorting SD cards when you approach."
     ],
     "responses": [
       {
         "text": "Just saying \"Hi.\"  See you around.",
         "topic": "TALK_DONE"
-      },
-      {
-        "text": "On second thought, I'll take a look at those lists of books you need.",
-        "topic": "TALK_WEAPONMASTER_QUEST"
       },
       {
         "text": "I've got those unarmed manuals you were looking for.  [Hand over the books]",

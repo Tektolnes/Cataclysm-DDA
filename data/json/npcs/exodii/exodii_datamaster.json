@@ -3,8 +3,8 @@
     "type": "npc",
     "id": "exodii_datamaster",
     "name_suffix": "Datamaster",
-    "class": "NC_EXODII_TYPE_11_Datamaster",
-    "name_unique": "Garrulus",
+    "class": "NC_EXODII_TYPE_3a_Datamaster",
+    "name_unique": "a jade cyborg",
     "attitude": 0,
     "mission": 3,
     "chat": "TALK_DATAMASTER_INTRO_1",
@@ -13,8 +13,8 @@
   },
   {
     "type": "npc_class",
-    "id": "NC_EXODII_TYPE_11_Datamaster",
-    "name": { "str": "Cyborg, type 11" },
+    "id": "NC_EXODII_TYPE_3a_Datamaster",
+    "name": { "str": "Cyborg, type 3a" },
     "job_description": "I'm a cyborg.",
     "traits": [
       { "trait": "EXODII_BODY_11" },
@@ -41,14 +41,14 @@
   },
   {
     "type": "mutation",
-    "id": "EXODII_BODY_11",
+    "id": "EXODII_BODY_3",
     "flags": [ "Exodii_Body" ],
-    "name": { "str": "Exodii cyborg framework - style 11a" },
+    "name": { "str": "Exodii cyborg framework - style 3a" },
     "points": 0,
     "visibility": 4,
     "ugliness": 4,
     "mixed_effect": true,
-    "description": "Your brain and some of your organs are shielded in a yellow plastic bipedal walker frame.",
+    "description": "Your brain and some of your organs are shielded in a copper bipedal walker frame.",
     "valid": false,
     "purifiable": false,
     "types": [ "Cyberframe", "Cybernetic" ],
@@ -56,8 +56,8 @@
       {
         "values": [
           { "value": "MAX_HP", "add": 20 },
-          { "value": "STRENGTH", "add": 2 },
-          { "value": "DEXTERITY", "add": 6 },
+          { "value": "STRENGTH", "add": 4 },
+          { "value": "DEXTERITY", "add": 4 },
           { "value": "CARRY_WEIGHT", "multiply": 2 }
         ]
       }
@@ -66,11 +66,11 @@
     "armor": [
       {
         "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth" ],
-        "cut": 15,
-        "bash": 15,
-        "stab": 15,
-        "bullet": 5,
-        "acid": 40,
+        "cut": 30,
+        "bash": 30,
+        "stab": 30,
+        "bullet": 25,
+        "acid": 25,
         "electric": 5
       }
     ]
