@@ -5924,6 +5924,19 @@
   },
   {
     "type": "overmap_special",
+    "id": "o_container_yard_inland",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "container_yard_inland_base_1_north" }
+    ],
+    "connections": [ { "point": [ -1, 0, 0 ], "terrain": "road", "from": [ 0, 0, 0 ] } ],
+    "locations": [ "field" ],
+    "city_distance": [ 1, 40 ],
+    "city_sizes": [ 4, -1 ],
+    "occurrences": [ 0, 1 ],
+    "flags": [ "CLASSIC", "MAN_MADE" ]
+  },
+  {
+    "type": "overmap_special",
     "id": "o_karting_l",
     "overmaps": [
       { "point": [ -1, 1, 0 ], "overmap": "s_lot_no_sidewalk_south" },
