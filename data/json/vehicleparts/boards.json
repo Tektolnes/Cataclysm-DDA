@@ -217,6 +217,13 @@
     "extend": { "flags": [ "OPAQUE", "FULL_BOARD" ] }
   },
   {
+    "id": "shipping_container_wall",
+    "type": "vehicle_part",
+    "copy-from": "hdboard_abstract",
+    "name": { "str": "shipping container wall" },
+    "extend": { "flags": [ "OPAQUE", "FULL_BOARD" ] }
+  },
+  {
     "id": "hdhalfboard",
     "copy-from": "hdboard_abstract",
     "type": "vehicle_part",

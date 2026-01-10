@@ -190,6 +190,17 @@
     "type": "vehicle_part"
   },
   {
+    "id": "shipping_container_door",
+    "copy-from": "hdhatch",
+    "description": "A very strong door.  Solid construction means you can't see through it when closed.",
+    "durability": 1000,
+    "looks_like": "hatch_opaque",
+    "name": { "str": "shipping container door" },
+    "extend": { "flags": [ "OPAQUE", "HUGE_OK", "AISLE", "BOARDABLE", "FURNITURE_TIEDOWN", "LOCKABLE_DOOR" ] },
+    "delete": { "flags": [ "WINDOW", "LOCKABLE_CARGO" ] },
+    "type": "vehicle_part"
+  },
+  {
     "type": "vehicle_part",
     "id": "door_wood",
     "copy-from": "door",
