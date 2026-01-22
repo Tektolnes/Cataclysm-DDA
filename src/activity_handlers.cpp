@@ -65,7 +65,6 @@
 #include "vpart_position.h"
 #include "weather.h"
 
-static const activity_id ACT_DISMEMBER( "ACT_DISMEMBER" );
 static const activity_id ACT_FERTILIZE_PLOT( "ACT_FERTILIZE_PLOT" );
 static const activity_id ACT_FETCH_REQUIRED( "ACT_FETCH_REQUIRED" );
 static const activity_id ACT_FILL_LIQUID( "ACT_FILL_LIQUID" );
@@ -88,7 +87,6 @@ static const activity_id ACT_PULL_CREATURE( "ACT_PULL_CREATURE" );
 static const activity_id ACT_REPAIR_ITEM( "ACT_REPAIR_ITEM" );
 static const activity_id ACT_START_FIRE( "ACT_START_FIRE" );
 static const activity_id ACT_TIDY_UP( "ACT_TIDY_UP" );
-static const activity_id ACT_TOOLMOD_ADD( "ACT_TOOLMOD_ADD" );
 static const activity_id ACT_TRAVELLING( "ACT_TRAVELLING" );
 static const activity_id ACT_VEHICLE_DECONSTRUCTION( "ACT_VEHICLE_DECONSTRUCTION" );
 static const activity_id ACT_VEHICLE_REPAIR( "ACT_VEHICLE_REPAIR" );
@@ -143,7 +141,6 @@ activity_handlers::do_turn_functions = {
     { ACT_MULTIPLE_CHOP_TREES, chop_trees_do_turn },
     { ACT_REPAIR_ITEM, repair_item_do_turn },
     { ACT_TRAVELLING, travel_do_turn },
-    { ACT_DISMEMBER, dismember_do_turn },
     { ACT_FIND_MOUNT, find_mount_do_turn },
     { ACT_FERTILIZE_PLOT, fertilize_plot_do_turn }
 };
@@ -154,7 +151,6 @@ activity_handlers::finish_functions = {
     { ACT_REPAIR_ITEM, repair_item_finish },
     { ACT_HEATING, heat_item_finish },
     { ACT_MEND_ITEM, mend_item_finish },
-    { ACT_TOOLMOD_ADD, toolmod_add_finish },
     { ACT_PULL_CREATURE, pull_creature_finish }
 };
 
@@ -997,22 +993,6 @@ void activity_handlers::mend_item_finish( player_activity *act, Character *you )
              start_durability, target.durability_indicator( true ) );
 }
 
-void activity_handlers::toolmod_add_finish( player_activity *act, Character *you )
-{
-    act->set_to_null();
-    if( act->targets.size() != 2 || !act->targets[0] || !act->targets[1] ) {
-        debugmsg( "Incompatible arguments to ACT_TOOLMOD_ADD" );
-        return;
-    }
-    item &tool = *act->targets[0];
-    item &mod = *act->targets[1];
-    you->add_msg_if_player( m_good, _( "You successfully attached the %1$s to your %2$s." ),
-                            mod.tname(), tool.tname() );
-    tool.put_in( mod, pocket_type::MOD );
-    tool.on_contents_changed();
-    act->targets[1].remove_item();
-}
-
 void activity_handlers::travel_do_turn( player_activity *act, Character *you )
 {
     if( !you->omt_path.empty() ) {
@@ -1064,11 +1044,6 @@ void activity_handlers::repair_item_do_turn( player_activity *act, Character *yo
         you->mod_moves( -act->moves_left * you->fine_detail_vision_mod() );
         act->moves_left = 0;
     }
-}
-
-void activity_handlers::dismember_do_turn( player_activity * /*act*/, Character *you )
-{
-    you->burn_energy_arms( -20 );
 }
 
 void activity_handlers::find_mount_do_turn( player_activity *act, Character *you )
