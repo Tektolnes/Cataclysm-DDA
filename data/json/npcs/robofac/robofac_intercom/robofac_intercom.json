@@ -1173,7 +1173,6 @@
     "responses": [
       {
         "text": "It's a warehouse owned by a race of inter-dimensional beings who call themselves the Exodii.  They're… robots?  Cyborgs?  More metal than man in my opinion.  They use automated machinery to do their fighting and heavy lifting.  They do understand English to a certain extent, but when talking they use a strange dialect they like to call Anglic.",
-        "topic": "TALK_ROBOFAC_INTERCOM_BUY_EXODII_WAREHOUSE",
         "effect": [ { "u_add_faction_trust": 1 }, { "math": [ "hub01_knows_exodii = 1" ] } ]
       },
       {
