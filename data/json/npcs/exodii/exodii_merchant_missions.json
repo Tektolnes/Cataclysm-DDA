@@ -597,10 +597,10 @@
   {
     "id": "TALK_EXODII_MERCHANT_mission_3_complete",
     "type": "talk_topic",
-    "dynamic_line": "&Rubik sighs, takes the head, stares at it for a moment, then sets it gently down on the counter.  They then reach below the counter and take out three clear plastic bags, each containing a different cybernetic module.  \"Ye've done us'n a true service, so as us'n promised, take one o' these dandies as true reward.  Which'll it be?  As y'like.",
+    "dynamic_line": "&Rubik sighs, takes the head, stares at it for a moment, then sets it gently down on the counter.  They then reach below the counter and take out three clear plastic bags, each containing a different cybernetic module.  \"Ye've done us'n a true service, so as us'n promised, Ol' Rubik'll add ye one o' these dandies as true reward.  Which'll it be?  As y'like.  Bear in mind these'll want for power, aye?  No free horses, as they say.",
     "responses": [
       {
-        "text": "[Install Diamond Cornea CBM] I like the look of those eye implants.  Let's try that.",
+        "text": "[Install Occular Amplifiers CBM: +2 perception powered, -3 unpowered] I like the look of those eye implants.  Let's try that.",
         "effect": [
           { "u_add_effect": "narcosis", "duration": "30 minutes" },
           { "u_add_effect": "sleep", "duration": "30 minutes" },
@@ -611,7 +611,7 @@
         "topic": "TALK_DONE"
       },
       {
-        "text": "[Install Muscle Augmentation CBM] Some new muscle fibers sound great.  Let's do those.",
+        "text": "[Install Muscle Augmentation CBM: +2 strength powered, -3 unpowered] Some new muscle fibers sound great.  Let's do those.",
         "effect": [
           { "u_add_effect": "narcosis", "duration": "30 minutes" },
           { "u_add_effect": "sleep", "duration": "30 minutes" },
@@ -622,7 +622,7 @@
         "topic": "TALK_DONE"
       },
       {
-        "text": "[Install Cerebral Booster CBM] Don't think I'd consider a brain implant before all of this, but didn't think I'd ever meet an alien, either.  Let's do that.",
+        "text": "[Install Cerebral Booster CBM: +2 intelligence powered, -3 unpowered] Don't think I'd consider a brain implant before all of this, but didn't think I'd ever meet a cyborg, either.  Let's do that.",
         "effect": [
           { "u_add_effect": "narcosis", "duration": "30 minutes" },
           { "u_add_effect": "sleep", "duration": "30 minutes" },
