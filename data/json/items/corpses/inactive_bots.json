@@ -578,7 +578,7 @@
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "name": { "str": "inactive Hub 01 HOUND" },
-    "description": "A Hub 01 Hostile Overstimulation & Unmanned Neutralization Drone.  If reprogrammed and reloaded successfully, this quadrapedal robot will closely track you, using a taser and noise-generator to distract, disorient, and ultimately neutralize nearby enemies.",
+    "description": "A Hub 01 Hostile Overstimulation & Unmanned Neutralization Drone.  If reprogrammed and reloaded successfully, this quadrupedal robot will closely track you, using a taser and noise-generator to distract, disorient, and ultimately neutralize nearby enemies.",
     "weight": "32700 g",
     "volume": "105 L",
     "price": "800 USD",
