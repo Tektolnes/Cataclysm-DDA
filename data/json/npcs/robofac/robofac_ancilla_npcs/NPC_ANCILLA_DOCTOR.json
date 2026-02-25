@@ -125,7 +125,7 @@
         "condition": { "u_has_trait": "Hub01_CBM_Interface" }
       },
       {
-        "text": "So… I may have let the Exodii take out your interface. And then I may have let them install their interface.  Let's say I wanted you to swap them.  Again.  What's that gonna cost me?",
+        "text": "So… I may have let the Exodii take out your interface.  And then I may have let them install their interface.  Let's say I wanted you to swap them.  Again.  What's that gonna cost me?",
         "topic": "TALK_ANCILLA_DOCTOR_SWAP_INTERFACE_AGAIN",
         "condition": { "and": [ { "u_has_trait": "CBM_Interface_brain_lesion" }, { "u_has_trait": "CBM_Interface" } ] }
       },
@@ -293,7 +293,7 @@
   {
     "id": "TALK_ANCILLA_DOCTOR_SWAP_INTERFACE_AGAIN",
     "type": "talk_topic",
-    "dynamic_line": "… you what?  Seriously?  I mean, yeah, I can do it again.  But look, I'll give it to you straight:  your brain isn't gonna be the same after.  I'm not even sure you'll live.  I'll tell you what… I'll discount it to 10 HGCs, but I get to keep your shit if you die.  Deal?",
+    "dynamic_line": "…you what?  Seriously?  I mean, yeah, I can do it again.  But look, I'll give it to you straight:  your brain isn't gonna be the same after.  I'm not even sure you'll live.  I'll tell you what… I'll discount it to 10 HGCs, but I get to keep your shit if you die.  Deal?",
     "responses": [
       {
         "text": "[10 HGC - swap CBM interfaces - MAJOR RISK OF BRAIN DAMAGE]  It's worth the risk.  Get this thing out of me!",
@@ -329,7 +329,7 @@
     "id": "TALK_ANCILLA_DOCTOR_SWAPPED_INTERFACE_AGAIN_2",
     "type": "talk_topic",
     "dynamic_line": "&Doc Stevens stares at you confusedly.  Then he squints at you.  Then he just shrugs his shoulders.  \"Yeah, what you said… same for me.  I think.\"  Then the doctor's eyes go wide and he raises his eyebrows.  He takes a sharp breath.  Then he turns and walks away.",
-    "responses": [ { "text": "… What?", "topic": "TALK_DONE" } ]
+    "responses": [ { "text": "…What?", "topic": "TALK_DONE" } ]
   },
   {
     "id": "TALK_ANCILLA_DOCTOR_AID",
