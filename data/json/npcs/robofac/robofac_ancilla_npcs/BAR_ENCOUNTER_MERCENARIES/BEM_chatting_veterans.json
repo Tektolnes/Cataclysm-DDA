@@ -114,7 +114,7 @@
         "topic": "BEM_CHATTING_VETERANS_TELL_STORY_IMPRESSIVE"
       },
       {
-        "text": "Regale the tale of the glowing church and the otherwordly strings.",
+        "text": "Regale the tale of the glowing church and the otherworldly strings.",
         "condition": { "compare_string": [ "yes", { "u_val": "knows_xedra_field_station_1" } ] },
         "topic": "BEM_CHATTING_VETERANS_TELL_STORY_OK"
       },
@@ -172,7 +172,7 @@
         "topic": "BEM_CHATTING_VETERANS_TELL_STORY_IMPRESSIVE"
       },
       {
-        "text": "Tell them about the inverted metal ziggurat, the hissing doors, and the mummified zombies.  Show them the otherwordly steel equipment to prove your tale.",
+        "text": "Tell them about the inverted metal ziggurat, the hissing doors, and the mummified zombies.  Show them the otherworldly steel equipment to prove your tale.",
         "condition": {
           "or": [
             { "u_has_item": "string_dimension_partigiana_ixwa" },
