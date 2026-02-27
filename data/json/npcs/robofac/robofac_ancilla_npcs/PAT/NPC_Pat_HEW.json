@@ -196,6 +196,8 @@
     "id": "TALK_PAT_ADVICE_MISSION_ROBOFAC_INTERCOM_MWS_4_VOID_SPIDER_LAIR",
     "type": "talk_topic",
     "dynamic_line": "Well, yeah, I'd fuckin' say so.  You don' plan to go back theah, though, right?  That fuckin' spidah, man.  I don' like spidahs.",
-    "responses": [ { "text": "I guess if I'm ever back there, I could try.", "topic": "TALK_PAT_ADVICE_MISSION_ROBOFAC_INTERCOM_MWS_4" } ]
+    "responses": [
+      { "text": "I guess if I'm ever back there, I could try.", "topic": "TALK_PAT_ADVICE_MISSION_ROBOFAC_INTERCOM_MWS_4" }
+    ]
   }
 ]
