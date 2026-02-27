@@ -581,7 +581,7 @@
         ]
       },
       {
-        "text": "Could I get another pair of AR glasses?  Here's 10 HGC for suppies.",
+        "text": "Could I get another pair of AR glasses?  Here's 10 HGC for supplies.",
         "topic": "TALK_ROBOFAC_MERC_PAT_REMAKE_AR_GLASSES_YES",
         "condition": {
           "and": [
