@@ -773,7 +773,10 @@
         ],
         "topic": "TALK_ROBOFAC_MERC_PAT_ADVICE"
       },
-      { "text": "No, I've got this for now.  If I change my mind, I'll let you know.", "topic": "TALK_ROBOFAC_MERC_PAT_ADVICE" }
+      {
+        "text": "No, I've got this for now.  If I change my mind, I'll let you know.",
+        "topic": "TALK_ROBOFAC_MERC_PAT_ADVICE"
+      }
     ]
   },
   {
