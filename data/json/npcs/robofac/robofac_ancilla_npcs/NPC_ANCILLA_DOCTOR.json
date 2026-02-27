@@ -248,7 +248,7 @@
   {
     "id": "TALK_ANCILLA_DOCTOR_INSTALL_INTERFACE_REWARD_B",
     "type": "talk_topic",
-    "dynamic_line": "Right, they told me about you.  I guess you know the drill and how these things work.  I'll use the machine to take out that hostile Exodii tech, install the upgraded Hub 01 unit, and top you up with some extra power and a toolset, if you don't have one already.  The new interface is backwards compatable with the Exodii bionics, so no worries there.  I've been given 10 HCG to give you for the Exodii interface scrap - and I was told that's a condition for the surgery, and to remind you that thing'll give you cancer, anyway.  You ready?\"",
+    "dynamic_line": "Right, they told me about you.  I guess you know the drill and how these things work.  I'll use the machine to take out that hostile Exodii tech, install the upgraded Hub 01 unit, and top you up with some extra power and a toolset, if you don't have one already.  The new interface is backwards compatible with the Exodii bionics, so no worries there.  I've been given 10 HCG to give you for the Exodii interface scrap - and I was told that's a condition for the surgery, and to remind you that thing'll give you cancer, anyway.  You ready?\"",
     "responses": [
       {
         "text": "[Exchange your Exodii CBM interface for the Hub 01 CBM interface and 10 HGC]  Let's do it.",
