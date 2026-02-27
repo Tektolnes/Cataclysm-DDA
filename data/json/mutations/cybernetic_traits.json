@@ -10,7 +10,7 @@
   {
     "type": "mutation",
     "id": "CBM_Interface",
-    "name": { "str": "Exodii Neurobionic Interface" },
+    "name": { "str": "Standard Neurobionic Interface" },
     "points": 0,
     "description": "You have a matrix in your central nervous system that acts as a universal control and installation bus for compact bionic modules.",
     "valid": false,
