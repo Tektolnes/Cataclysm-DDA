@@ -130,7 +130,7 @@
         "condition": { "and": [ { "u_has_trait": "CBM_Interface_brain_lesion" }, { "u_has_trait": "CBM_Interface" } ] }
       },
       {
-        "text": "I HAVE A MINOR BRAIN LESION AND NO CBM INTERFACE, WHICH SHOULDN'T BE POSSIBLE! [IF YOU SEE THIS OPTION IN A NORMAL GAME PLEASE FILE A BUG REPORT]",
+        "text": "I HAVE A MINOR BRAIN LESION AND NO CBM INTERFACE, WHICH SHOULDN'T BE POSSIBLE!  [IF YOU SEE THIS OPTION IN A NORMAL GAME PLEASE FILE A BUG REPORT]",
         "topic": "TALK_DONE",
         "condition": {
           "and": [
