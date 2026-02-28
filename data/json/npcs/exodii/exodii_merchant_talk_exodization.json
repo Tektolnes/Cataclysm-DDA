@@ -209,7 +209,6 @@
       },
       {
         "text": "Actually, Rubik.  This feels strange to say, but I already have a bionic interface.  The scientists from that bunker, Hub 01, installed it.  What I really want is for you to remove it, and replace it with your interface.",
-        
         "condition": { "and": [ { "u_has_trait": "Hub01_CBM_Interface" }, { "not": { "u_has_trait": "CBM_Interface_brain_lesion" } } ] },
         "topic": "TALK_EXODII_MERCHANT_Remove_Hub01_CBM_interface_1"
       },
