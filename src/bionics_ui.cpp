@@ -29,7 +29,6 @@
 #include "item_location.h"
 #include "localized_comparator.h"
 #include "map.h"
-#include "options.h"
 #include "output.h"
 #include "pimpl.h"
 #include "point.h"
