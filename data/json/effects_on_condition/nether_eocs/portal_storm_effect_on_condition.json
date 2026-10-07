@@ -680,7 +680,8 @@
         "then": { "run_eocs": "EOC_YRAX_WARP_IN", "time_in_future": [ "3 seconds", "6 seconds" ] }
       },
       { "run_eocs": "EOC_PORTAL_HIGHLANDS_RETURN", "time_in_future": [ "3 hours", "48 hours" ] },
-      { "math": [ "u_ire -= 5" ] }
+      { "math": [ "u_ire -= 5" ] },
+      { "run_eocs": "EOC_DIMENSION_TELE_SICKNESS" }
     ]
   },
   {
@@ -695,7 +696,8 @@
         "fail_message": "Nothing seems to change.",
         "success_message": "Your surroundings warp and fold into the recesses of the world you know."
       },
-      { "give_achievement": "achievement_reach_highlands" }
+      { "give_achievement": "achievement_reach_highlands" },
+      { "run_eocs": "EOC_DIMENSION_TELE_SICKNESS" }
     ],
     "false_effect": [
       {
