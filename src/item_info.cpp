@@ -3472,9 +3472,11 @@ void item::bionic_info( std::vector<iteminfo> &info, const iteminfo_query *parts
 
     insert_separation_line( info );
 
-    info.emplace_back( "DESCRIPTION", list_occupied_bps( type->bionic->id,
-                       _( "This bionic is installed in the following body "
-                          "part(s):" ) ) );
+    if( parts->test( iteminfo_parts::DESCRIPTION_CBM_SLOTS ) ) {
+        info.emplace_back( "DESCRIPTION", list_occupied_bps( type->bionic->id,
+                           _( "This bionic is installed in the following body "
+                              "part(s), or their equivalent part(s):" ) ) );
+    }
 
     if( is_bionic() && has_flag( flag_NO_STERILE ) ) {
         info.emplace_back( "DESCRIPTION",
