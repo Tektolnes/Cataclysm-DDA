@@ -2797,7 +2797,6 @@ int Character::get_used_bionics_slots( const bodypart_id &bp ) const
 {
     int used_slots = 0;
     const bodypart_str_id slot_bp = bp->similar_bodypart.value_or( bp->id );
-    
     for( const bionic_id &bid : get_bionics() ) {
         auto search = bid->occupied_bodyparts.find( slot_bp );
         if( search != bid->occupied_bodyparts.end() ) {
@@ -2827,14 +2826,12 @@ int Character::get_total_bionics_slots( const bodypart_id &bp ) const
     for( const trait_id &mut : get_functioning_mutations() ) {
         mut_bio_slots += mut->bionic_slot_bonus( id );
     }
-    
     int similar_bio_slots = 0;
     for( const bodypart_str_id &similar : id->get_all_combined_similar_bodyparts() ) {
         if( similar->similar_bodypart == id && has_part( similar.id() ) ) {
             similar_bio_slots += similar->bionic_slots();
         }
     }
-    
     return bp->bionic_slots() + mut_bio_slots + similar_bio_slots;
 }
 
