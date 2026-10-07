@@ -16,7 +16,10 @@
         }
       },
       { "u_add_effect": "teleglow", "duration": { "context_val": "tele_sickness_dur" } },
-      { "if": { "not": { "u_has_trait": "anti_shape" } }, "then": { "u_add_effect": "nausea", "duration": { "context_val": "tele_sickness_dur" } } }
+      {
+        "if": { "not": { "u_has_trait": "anti_shape" } },
+        "then": { "u_add_effect": "nausea", "duration": { "context_val": "tele_sickness_dur" } }
+      }
     ]
   }
 ]

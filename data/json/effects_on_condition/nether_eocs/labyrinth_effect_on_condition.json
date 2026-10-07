@@ -266,10 +266,7 @@
         }
       },
       { "u_teleport": { "u_val": "safehouse_floor_portal_enclosure" } },
-      {
-        "if": { "not": { "u_has_trait": "anti_shape" } },
-        "then": { "u_add_effect": "nausea", "duration": 60 }
-      },
+      { "if": { "not": { "u_has_trait": "anti_shape" } }, "then": { "u_add_effect": "nausea", "duration": 60 } },
       {
         "if": { "not": { "compare_string": [ "yes", { "u_val": "traveled_to_labyrinth_safehouse" } ] } },
         "then": { "open_dialogue": { "topic": "COMP_labyrinthine_safehouse_computer_meeting" } }
