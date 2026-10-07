@@ -706,19 +706,18 @@ void avatar::power_bionics()
             bp_to_pos.emplace( bp.id(), bps.size() - 1 );
             max_width = std::max( max_width, utf8_width( s ) );
         }
-        
-        for( const bodypart_id &bp: get_all_body_parts() ) {
+
+        for( const bodypart_id &bp : get_all_body_parts() ) {
             if( bp->similar_bodypart.has_value() ) {
                 bp_to_pos.emplace( bp->similar_bodypart.value(), bp_to_pos.at( bp.id() ) );
             }
         }
-        
         const int pos_x = WIDTH - 2 - max_width;
         wattron( wBio, c_light_gray );
         for( size_t i = 0; i < bps.size(); ++i ) {
             mvwprintw( wBio, point( pos_x, i + list_start_y ), bps[i] );
         }
-        wattroff( wBio, c_light_gray ); 
+        wattroff( wBio, c_light_gray );
 
         if( current_bionic_list->empty() ) {
             std::string msg;
