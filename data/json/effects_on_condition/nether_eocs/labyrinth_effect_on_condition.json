@@ -214,7 +214,10 @@
               },
               { "u_teleport": { "u_val": "safehouse_floor_portal_enclosure" } },
               { "open_dialogue": { "topic": "COMP_labyrinthine_safehouse_computer_meeting" } },
-              { "run_eocs": "EOC_DIMENSION_TELE_SICKNESS" }
+              {
+                "if": { "not": { "u_has_trait": "anti_shape" } },
+                "then": { "u_add_effect": "nausea", "duration": 60 }
+              }
             ]
           }
         ]
@@ -264,9 +267,8 @@
       },
       { "u_teleport": { "u_val": "safehouse_floor_portal_enclosure" } },
       {
-        "if": { "not": { "compare_string": [ "yes", { "u_val": "traveled_to_labyrinth_safehouse" } ] } },
-        "then": { "run_eocs": "EOC_DIMENSION_TELE_SICKNESS" },
-        "else": { "if": { "not": { "u_has_trait": "anti_shape" } }, "then": { "u_add_effect": "nausea", "duration": 60 } }
+        "if": { "not": { "u_has_trait": "anti_shape" } },
+        "then": { "u_add_effect": "nausea", "duration": 60 }
       },
       {
         "if": { "not": { "compare_string": [ "yes", { "u_val": "traveled_to_labyrinth_safehouse" } ] } },

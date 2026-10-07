@@ -5963,13 +5963,5 @@
         ]
       }
     ]
-  },
-  {
-    "type": "effect_type",
-    "id": "effect_dimension_tele_resonance",
-    "name": [ "Teleportation Sickness" ],
-    "desc": [ "Something feels wrong." ],
-    "rating": "bad",
-    "enchantments": [ { "condition": "ACTIVE", "values": [ { "value": "ARTIFACT_RESONANCE", "add": 7500 } ] } ]
   }
 ]
